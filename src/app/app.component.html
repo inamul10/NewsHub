@@ -1,0 +1,68 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon (click)="this.sideNav.open()" *ngIf="!sideNav?.opened">menu</mat-icon>
+        <mat-icon (click)="this.sideNav.close()" *ngIf="sideNav?.opened">close</mat-icon>
+    </button>
+    <span class="text-yellow-300">NewsHub</span>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="bg-black">
+    <mat-sidenav #sidenav="matSidenav">
+        <img class="avatar mat-elavation-z8"
+            src="data:image/png;base64,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"
+            alt="">
+        <h4 class="name p-2 font-black text-yellow-300">NewsHub</h4>
+        <mat-divider></mat-divider>
+
+        <ng-container *ngFor="let source of sources">
+            <button (click)="searchSource(source)" mat-button class="menu-button">
+                <mat-icon>event_note</mat-icon>
+                <span>{{source.name}}</span>
+            </button>
+        </ng-container>
+
+
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button">
+            <mat-icon>settings</mat-icon>
+            <span>Settings</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content class="content mat-elevation-z4">
+        <section class="text-gray-600 bg-gray-100 body-font">
+            <div class="container px-5  mx-auto max-w-7x1">
+                <div class="flex flex-wrap w-full mb-4 p-4">
+                    <div class="w-full mb-6 lg:mb-0">
+                        <h1 class="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">
+                            {{selectedNewsChannel}}</h1>
+                        <div class="h-1 w-60 bg-indigo-500 rounded"></div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <ng-container *ngFor="let article of articles">
+                        <div class="xl:w-1/3 md:w-1/2 p-4">
+                            <div class="bg-white p-6 rounded-lg">
+                                <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6"
+                                    [src]="article.urlToImage" alt="Image Size 720x400">
+                                <div class="flex justify-between">
+                                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Author:
+                                        {{article.author}}</h3>
+                                    <h4 style="text-overflow: ellipsis;
+                                    display: -webkit-box;" class="tracking-widest text-gray-800 text-sm">
+                                        {{article.publishedAt | date:'medium'}}</h4>
+                                </div>
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 overflow-hidden">
+                                    {{article.title}}</h2>
+                                <p class="leading-relaxed text-base" [innerHtml]="article.description"></p><span><a
+                                        class="text-blue-500" href="{{article.url}}" target="_blank">read
+                                        more....</a></span>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                </div>
+            </div>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>
