@@ -1,6 +1,14 @@
 # NewsProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+### Some of the snippets from the NewsHub App
+![image](https://github.com/inamul10/NewsHub/assets/122964083/3591a12b-138e-427f-914b-5d3e886bfbdf)
+![image](https://github.com/inamul10/NewsHub/assets/122964083/2e01087d-9fe9-4437-868c-1d8f077143aa)
+![image](https://github.com/inamul10/NewsHub/assets/122964083/4c18523b-53fb-40df-9545-ff6ed05cde17)
+![image](https://github.com/inamul10/NewsHub/assets/122964083/1c9b5b6f-bf02-478e-a93e-b52e22c4711d)
+
+
+## Build:
+Build using ANgular-js , Angular Material , Tailwind css , SCSS
 
 ## Development server
 
